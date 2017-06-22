@@ -1,17 +1,18 @@
 
+
 module.exports = function main(input) {	
-	let numbers = ['._. ' '...'  '._. ' '._.'  '...'  '._.'  '._.'  '._.'  '._.'  '._.'
-	                |.| ,  ..|  , ._|  , ._|  , |_|  , |_. ,  |_. ,  ..| ,  |_| ,  |_|
-                    |_|    ..|    |_.    ._|    ..|    ._|    |_|    ..|    |_|    ..|];
+	let numbers = `._.   ...   ._.   ._.   ...   ._.   ._.   ._.   ._.   ._.
+                   |.|   ..|   ._|   ._|   |_|   |_.   |_.   ..|   |_|   |_|
+                   |_|   ..|   |_.   ._|   ..|   ._|   |_|   ..|   |_|   ..|`;
 	
+	/* 将字符串转化为数组保存，按数字牵引保存 */
+	let splitArr = numbers.split(/   |\n/),
 		numberArr = [],
 		k=0;
-	for(let i=0;i<numbers.length;i++){
-		let numberStr = numbers[i];
-		if(''==numberStr) 
-			continue;
-		if(10==k)
-			k=0; //十组一循环
+	for(let i=0;i<splitArr.length;i++){
+		let numberStr = splitArr[i];
+		if(''==numberStr) continue;
+		if(10==k) k=0; //十组一循环
 		if(!(k in numberArr))
 			numberArr[k] = []; //二维数组未初始化
 		numberArr[k].push(numberStr);
