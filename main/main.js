@@ -1,13 +1,13 @@
 
 module.exports = function main(input) {	
 	let numbers = [
-'._. ' ' ...'  ' ._. ' ' ._. '  '...'  ' ._.'   '._.'   '._.'  '._.'   '._.'
- |.| ,   ..|  ,  ._|  ,  ._|  ,  |_|  ,  |_. ,   |_. ,   ..| ,  |_| ,   |_|
- |_|     ..|     |_.     ._|     ..|     ._|     |_|     ..|    |_|     ..|];
+'._. ' '...'  '._. ' '._.'  '...'  '._.'  '._.'  '._.'  '._.'  '._.'
+ |.| ,  ..|  , ._|  , ._|  , |_|  , |_. ,  |_. ,  ..| ,  |_| ,  |_|
+ |_|    ..|    |_.    ._|    ..|    ._|    |_|    ..|    |_|    ..|];
 	
 		numberArr = [],
 		k=0;
-	for(let i=0,l=numbers.length;i<l;i++){
+	for(let i=0;i<numbers.length;i++){
 		let numberStr = numbers[i];
 		if(''==numberStr) 
 			continue;
